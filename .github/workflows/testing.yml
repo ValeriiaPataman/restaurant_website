@@ -52,7 +52,7 @@ jobs:
     needs: [ deploy ]
     steps:
       - uses: actions/checkout@v2
-      - uses: emiliopedrollo/auto-merge@v1.2.0
+      - uses: peter-evans/enable-pull-request-automerge@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           target_branch: 'main'
